@@ -36,8 +36,8 @@ public class MergeSort {
         
 
 
-        while (contadorPrimerArreglo <= mitadArreglo && contadorSegundoArreglo <= inverso) { // mientras arregloUno y arregloDos tengan elementos
-            if (arregloTempoDos[contadorPrimerArreglo] >= arregloTempoDos[contadorSegundoArreglo]) { //se compara los elementos de cada arreglo para ver cual es menor
+         while (contadorPrimerArreglo <= mitadArreglo && contadorSegundoArreglo <= inverso) { // mientras arregloUno y arregloDos tengan elementos
+            if (arregloTempoDos[contadorPrimerArreglo] <= arregloTempoDos[contadorSegundoArreglo]) { //se compara los elementos de cada arreglo para ver cual es menor
                 arregloTempoUno[acompladorArreglos] = arregloTempoDos[contadorPrimerArreglo]; // se coloca el elemento del primer arreglo en la posicion correspondiente
                 contadorPrimerArreglo++;
             } else {
@@ -70,24 +70,24 @@ public class MergeSort {
 
         Random numAzar = new Random();
         int cantidadElementos = numAzar.nextInt(10) + 1; // genera un número numAzar entre 1 y 10
-        int[] arregloTempoUno = new int[cantidadElementos]; // se crea la cantidad de elementos que tendra el arreglo
+        int[] arreglo = new int[cantidadElementos]; // se crea la cantidad de elementos que tendra el arreglo
         for (int i = 0; i < cantidadElementos; i++) {
-            arregloTempoUno[i] = numAzar.nextInt(100); // genera los número que estaran dentro del arreglo entre 0 y 99
+            arreglo[i] = numAzar.nextInt(100); // genera los número que estaran dentro del arreglo entre 0 y 99
         }
         
         // Mostrar el arreglo antes de ordenar
         System.out.println("Arreglo original:");
-        for (int num : arregloTempoUno) {
+        for (int num : arreglo) {
             System.out.print(num + " ");
         }
         System.out.println();
         
         // Ordenar el arreglo
-        mergeSort(arregloTempoUno);
+        mergeSort(arreglo);
         
         // Mostrar el arreglo ordenado
         System.out.println("Arreglo ordenado:");
-        for (int num : arregloTempoUno) {
+        for (int num : arreglo) {
             System.out.print(num + " ");
         }
     }
