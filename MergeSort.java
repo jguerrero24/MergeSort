@@ -1,5 +1,3 @@
-package Examen;
-
 import java.util.Random;
 
 public class MergeSort {
